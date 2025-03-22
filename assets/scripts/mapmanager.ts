@@ -29,6 +29,7 @@ export class mapmanager extends Component {
             for (var j = 0; j < tilemap.getMapSize().height; j++) {
                 const gid = ground.getTileGIDAt(i, j)
                 if ( !IsPassable (gid) ){
+                    console.log(i, j, gid)
                     this.genBlock(i,j)
                 }
            }
@@ -43,7 +44,7 @@ export class mapmanager extends Component {
             }
             this.player = instantiate(res)
             objs.forEach(o => {
-                if(o.name == 'lb') {
+                if(o.name == 'spawnpoint') {
                     const pos = this.objCoordinate2Cocos(o.x, o.y)
                     this.player.setPosition(pos.x, pos.y)
                     console.log(o.name, o, pos)

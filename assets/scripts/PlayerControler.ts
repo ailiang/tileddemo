@@ -12,7 +12,7 @@ export class PlayerController extends Component {
     private rigidBody: RigidBody2D | null = null;
 
     Init() {
-        this.moveSpeed = 0.5 
+        this.moveSpeed = 3 
         this.rigidBody = this.getComponent(RigidBody2D);
         if (!this.rigidBody) {
             console.error("Player 缺少 RigidBody2D 组件！");
@@ -38,7 +38,6 @@ export class PlayerController extends Component {
         otherCollider: Collider2D,
         contact: IPhysics2DContact| null
     ) {
-        console.log('oncllide begin :' , this.node.position);
         return
         let velocity = this.rigidBody.linearVelocity;
         let impulse = new Vec2(-velocity.x *0.8, -velocity.y *0.8);
@@ -56,7 +55,6 @@ export class PlayerController extends Component {
         }
         if (this.rigidBody) {
             this.rigidBody.linearVelocity = velocity; 
-            console.log('PlayerPos: ', this.node.position);
         }
     }
 
