@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, TiledMap, Vec3, resources, Prefab, instantiate, Camera, TiledLayer, find } from 'cc';
+import { _decorator, Component, Node, TiledMap, Vec3, Animation, resources, Prefab, instantiate, Camera, TiledLayer, find, animation, Sprite } from 'cc';
 import { IsPassable, mapProfile  } from './data/mapdata'; 
 import PlayerControllerGpt from './PlayerControlerGpt';
 import { FindPath, GridCell} from './base/Findpath';
@@ -41,7 +41,10 @@ export class mapmanager extends Component {
                     this.player.setPosition(pos.x, pos.y)
                     const ctrl = this.player.addComponent(PlayerControllerGpt)
                     ctrl.Init( tilemap, this.mainCamera, this.findpath)
+
                     this.node.addChild(this.player)
+                    const anim = this.player.getComponent(Animation)
+                    anim.play()
                     return
                 }
             })
