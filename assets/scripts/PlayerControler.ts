@@ -1,12 +1,13 @@
 
-import { _decorator, Component,Input, input, KeyCode, TiledMap, Vec3, EventKeyboard, v3, EventMouse, Camera } from 'cc';
-import { IsPassable, mapProfile } from './data/mapdata';
-import { FindPath, PathfindingResult } from './base/Findpath';
+import { _decorator, Component,Input, input, KeyCode, TiledMap, Vec3, EventKeyboard, v3, EventMouse, Camera, Animation, Sprite } from 'cc';
+import { FindPath } from './base/Findpath';
+import { PlayerStateMachine } from './state/PlayerStateMachine';
+import { PlayerState, mapProfile, IsPassable } from './data/Mapdata';
 const { ccclass, property } = _decorator;
 
 
 @ccclass
-export default class PlayerControllerGpt extends Component {
+export default class PlayerController extends Component {
     @property(TiledMap)
     tileMap: TiledMap = null;
 
@@ -22,12 +23,19 @@ export default class PlayerControllerGpt extends Component {
 
     private paths: Vec3[] = [] 
 
+    private stateMachine: PlayerStateMachine
+
     onLoad() {
         console.log("init load")
         input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
 
         input.on(Input.EventType.MOUSE_DOWN, this.onMouseClick, this);
+
+        const anim = this.getComponent(Animation) || this.addComponent(Animation)
+
+        this.stateMachine = new PlayerStateMachine(anim)
+        this.stateMachine.switchState(PlayerState.IdleRight)
     }
     // 鼠标点击回调
     private onMouseClick(event: EventMouse) {
@@ -91,6 +99,10 @@ export default class PlayerControllerGpt extends Component {
         this.tileMap = mp
         this.mainCamera = campera
         this.findpath = fp
+
+        this.addComponent(Sprite)
+
+        console.log("init")
     }
 
     onDestroy() {
@@ -134,7 +146,6 @@ export default class PlayerControllerGpt extends Component {
                 return
             }
         }
-        console.log("update")
         this.direction.set(Vec3.ZERO);
         const curPos = this.node.position
         if( Math.abs( curPos.x - this.target.x ) > 1 ) {

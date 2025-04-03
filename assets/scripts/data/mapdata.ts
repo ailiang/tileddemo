@@ -41,3 +41,14 @@ export const mapProfile : MapProfile = {
 };
 
  
+export enum PlayerState {
+    IdleFront = "IdleFront",
+    IdleBack = "IdleBack",
+    IdleRight = "IdleRight",
+}
+
+export enum PlayerStateResPath {
+    IdleFront = "character/idle/front/front",
+    IdleBack = "character/idle/back/back",
+    IdleRight= "character/idle/right/right",
+}

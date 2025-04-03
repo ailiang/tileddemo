@@ -1,12 +1,13 @@
 
-import { _decorator, Component, Node, TiledMap, Vec3, Animation, resources, Prefab, instantiate, Camera, TiledLayer, find, animation, Sprite } from 'cc';
-import { IsPassable, mapProfile  } from './data/mapdata'; 
-import PlayerControllerGpt from './PlayerControlerGpt';
+import { _decorator, Component, Node, TiledMap, Vec3, Animation, resources, Prefab, instantiate, Camera, TiledLayer, find, animation, Sprite, UITransform, v3 } from 'cc';
+import { IsPassable, mapProfile  } from './data/Mapdata'; 
+import PlayerController from './PlayerControler';
 import { FindPath, GridCell} from './base/Findpath';
+import { CreateNode } from './base/Util';
 const { ccclass, property } = _decorator;
 
 @ccclass('mapmanager')
-export class mapmanager extends Component {
+export class MapManager extends Component {
 
     @property(Camera) // 绑定主摄像机
     mainCamera: Camera = null!;
@@ -26,30 +27,29 @@ export class mapmanager extends Component {
         mapProfile.mapWidth = mapsize.width * tilesize.width
         mapProfile.mapHeight = mapsize.height * tilesize.height
         
+        //gen find path map
+        this.genFindpath(tilemap.getLayer("background"))
+
+        // get spawn point
         const obj = tilemap.getObjectGroup("objects")
         const objs = obj.getObjects()
-        resources.load("prefab/player", Prefab, (err, res: Prefab) => {
-            if (err) {
-                console.error(err);
-                return;
+        var spawnpoint: Vec3 = v3(0, 0, 0)
+        objs.forEach(o => {
+            if (o.name == 'spawnpoint') {
+                spawnpoint = this.objCoordinate2Cocos(o.x, o.y)
             }
-            this.player = instantiate(res)
-            objs.forEach(o => {
-                if(o.name == 'spawnpoint') {
-                    this.genFindpath(tilemap.getLayer("background"))
-                    const pos = this.objCoordinate2Cocos(o.x, o.y)
-                    this.player.setPosition(pos.x, pos.y)
-                    const ctrl = this.player.addComponent(PlayerControllerGpt)
-                    ctrl.Init( tilemap, this.mainCamera, this.findpath)
-
-                    this.node.addChild(this.player)
-                    const anim = this.player.getComponent(Animation)
-                    anim.play()
-                    return
-                }
-            })
         })
-    }
+
+        // create player
+        this.player = CreateNode('player') 
+        this.player.setPosition(spawnpoint)
+        const ctrl = this.player.addComponent(PlayerController)
+        ctrl.Init(tilemap, this.mainCamera, this.findpath)
+        this.node.addChild(this.player)
+
+        return
+   }
+    
 
     genFindpath(background: TiledLayer) {
         const grids: GridCell[][] = []

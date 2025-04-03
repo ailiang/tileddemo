@@ -1,0 +1,293 @@
+{
+  "ver": "1.0.8",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {
+    "f31a2": {
+      "importer": "sprite-frame",
+      "uuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93@f31a2",
+      "displayName": "",
+      "id": "f31a2",
+      "name": "GandalfHardcore Archer green sheet_06",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 72,
+        "height": 50,
+        "rawWidth": 72,
+        "rawHeight": 50,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0805ddca-3ed9-4769-afd9-68dc913256ca@6c48a",
+        "atlasUuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "76f10": {
+      "importer": "sprite-frame",
+      "uuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93@76f10",
+      "displayName": "",
+      "id": "76f10",
+      "name": "GandalfHardcore Archer green sheet_07",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 72,
+        "trimY": 0,
+        "width": 56,
+        "height": 50,
+        "rawWidth": 56,
+        "rawHeight": 50,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0805ddca-3ed9-4769-afd9-68dc913256ca@6c48a",
+        "atlasUuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2f4a4": {
+      "importer": "sprite-frame",
+      "uuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93@2f4a4",
+      "displayName": "",
+      "id": "2f4a4",
+      "name": "GandalfHardcore Archer green sheet_08",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 128,
+        "trimY": 0,
+        "width": 54,
+        "height": 48,
+        "rawWidth": 54,
+        "rawHeight": 48,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0805ddca-3ed9-4769-afd9-68dc913256ca@6c48a",
+        "atlasUuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "02070": {
+      "importer": "sprite-frame",
+      "uuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93@02070",
+      "displayName": "",
+      "id": "02070",
+      "name": "GandalfHardcore Archer green sheet_09",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 182,
+        "trimY": 0,
+        "width": 60,
+        "height": 48,
+        "rawWidth": 60,
+        "rawHeight": 48,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0805ddca-3ed9-4769-afd9-68dc913256ca@6c48a",
+        "atlasUuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3fa28": {
+      "importer": "sprite-frame",
+      "uuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93@3fa28",
+      "displayName": "",
+      "id": "3fa28",
+      "name": "GandalfHardcore Archer green sheet_10",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 242,
+        "trimY": 0,
+        "width": 62,
+        "height": 46,
+        "rawWidth": 62,
+        "rawHeight": 46,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0805ddca-3ed9-4769-afd9-68dc913256ca@6c48a",
+        "atlasUuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "77f5c": {
+      "importer": "sprite-frame",
+      "uuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93@77f5c",
+      "displayName": "",
+      "id": "77f5c",
+      "name": "GandalfHardcore Archer green sheet_11",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 304,
+        "trimY": 0,
+        "width": 62,
+        "height": 46,
+        "rawWidth": 62,
+        "rawHeight": 46,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0805ddca-3ed9-4769-afd9-68dc913256ca@6c48a",
+        "atlasUuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "attack.png",
+    "format": 3,
+    "uuid": "74bb8aa9-69c0-4278-86a8-eb593001bf93",
+    "textureUuid": "0805ddca-3ed9-4769-afd9-68dc913256ca@6c48a"
+  }
+}
